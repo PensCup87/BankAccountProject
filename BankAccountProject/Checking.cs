@@ -10,30 +10,45 @@ namespace BankAccountProject
     {
         //Is it a Field or Instance Variable or Both?
         protected double checkingBalance;
+        protected double checkingIncrease;
+        protected double checkDecrease;
 
         private double CheckingBalance
         {
             get { return this.checkingBalance; }
         }
 
-        public void IntialBalanceCheck()
+        private double CheckingIncrease
+        {
+            get { return this.checkingBalance; }
+            set { this.checkingBalance = value; }
+        }
+
+        private double CheckDecrease
+        {
+            get { return this.checkDecrease; }
+            set { this.checkDecrease = value; }
+        }
+
+        public Checking()
         {
             this.checkingBalance = 2000d;
+        }
+
+        public void IntialBalanceCheck()
+        {
             Console.WriteLine("Your current balance is $" + checkingBalance);
         }
 
         public override void DepositUpdate()
         {
+            Console.WriteLine("Enter your deposit: ");
+            checkingIncrease = int.Parse(Console.ReadLine());
+            checkingBalance = checkingBalance + checkingIncrease;
             Console.WriteLine("Current Checking Balance: $" + checkingBalance);
         }
 
-        public void CheckingDepositUpdade()
-        {
-            checkingBalance = checkingBalance + deposit;
-            Console.WriteLine("Your post deposit balance is $" + checkingBalance);
-        }
-
-        public void CheckinWithdrawUpdate()
+            public void CheckinWithdrawUpdate()
         {
             if (checkingBalance > withdraw)
             {

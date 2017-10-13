@@ -51,7 +51,19 @@ namespace BankAccountProject
                 }
                 else if (userChoice == "3")
                 {
-
+                    Console.WriteLine("A Checking");
+                    Console.WriteLine("B Savings");
+                    accountChoice = Console.ReadLine().ToLower();
+                    if (accountChoice == "a")
+                    {
+                        //deposit checking funds
+                        newChecking.DepositUpdate();
+                    }
+                    else
+                    {
+                        //deposit saving funds
+                        newSavings.DepositUpdate();
+                    }
                 }
                 else if (userChoice == "4")
                 {

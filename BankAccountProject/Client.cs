@@ -13,10 +13,7 @@ namespace BankAccountProject
         protected string lastName;
         protected int bankAccountNumber;
         
-
-
         //Properties
-
         private string FirstName
         {
             get { return this.firstName; }
