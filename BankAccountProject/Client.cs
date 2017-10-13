@@ -58,6 +58,7 @@ namespace BankAccountProject
 
             Console.WriteLine("Hello " + firstName + " " + lastName);
             Console.WriteLine("Your bank account number is: " + bankAccountNumber);
+            Console.WriteLine();
         }
 
 
