@@ -48,11 +48,15 @@ namespace BankAccountProject
             Console.WriteLine("Current Checking Balance: $" + checkingBalance);
         }
 
-            public void CheckinWithdrawUpdate()
+            public void CheckingWithdrawUpdate()
         {
-            if (checkingBalance > withdraw)
+            Console.WriteLine("Enter your withdraw: ");
+            checkDecrease = int.Parse(Console.ReadLine());
+
+            if (checkingBalance > checkDecrease)
             {
-                checkingBalance = checkingBalance - withdraw;
+                checkingBalance = checkingBalance - checkDecrease;
+                Console.WriteLine("Current Checking Balance: $" + checkingBalance);
             }
             else
             {

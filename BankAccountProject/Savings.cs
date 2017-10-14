@@ -53,13 +53,18 @@ namespace BankAccountProject
         {
             savingBalance = savingBalance + deposit;
             Console.WriteLine("Your post deposit balance is $" + savingBalance);
+            
         }
 
         public void CheckinWithdrawUpdate()
         {
-            if (savingBalance > withdraw)
+            Console.WriteLine("Enter your withdraw: ");
+            savingWithdraw = int.Parse(Console.ReadLine());
+
+            if (savingBalance > savingWithdraw)
             {
-                savingBalance = savingBalance - withdraw;
+                savingBalance = savingBalance - savingWithdraw;
+                Console.WriteLine("Current Savinging Balance: $" + savingBalance);
             }
             else
             {
