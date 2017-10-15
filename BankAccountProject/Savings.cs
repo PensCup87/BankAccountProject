@@ -61,7 +61,7 @@ namespace BankAccountProject
             Console.WriteLine("Enter your withdraw: ");
             savingWithdraw = int.Parse(Console.ReadLine());
 
-            if (savingBalance > savingWithdraw)
+            if (savingBalance > savingWithdraw && savingBalance > 100)
             {
                 savingBalance = savingBalance - savingWithdraw;
                 Console.WriteLine("Current Savinging Balance: $" + savingBalance);
