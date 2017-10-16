@@ -13,7 +13,7 @@ namespace BankAccountProject
         protected double savingDeposit;
         protected double savingWithdraw;
 
-        private double SavingBalance
+       private double SavingBalance
         {
             get { return this.savingBalance; }
         }
@@ -43,7 +43,7 @@ namespace BankAccountProject
         public override void DepositUpdate()
         {
             Console.WriteLine("Enter your deposit: ");
-            savingDeposit = int.Parse(Console.ReadLine());
+            savingDeposit = double.Parse(Console.ReadLine());
             savingBalance = savingBalance + savingDeposit;
             Console.WriteLine("Current Checking Balance: $" + savingBalance);
         }
@@ -59,7 +59,7 @@ namespace BankAccountProject
         public void CheckinWithdrawUpdate()
         {
             Console.WriteLine("Enter your withdraw: ");
-            savingWithdraw = int.Parse(Console.ReadLine());
+            savingWithdraw = double.Parse(Console.ReadLine());
 
             if (savingBalance > savingWithdraw && savingBalance > 100)
             {

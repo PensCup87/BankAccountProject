@@ -43,7 +43,7 @@ namespace BankAccountProject
         public override void DepositUpdate()
         {
             Console.WriteLine("Enter your deposit: ");
-            checkingIncrease = int.Parse(Console.ReadLine());
+            checkingIncrease = double.Parse(Console.ReadLine());
             checkingBalance = checkingBalance + checkingIncrease;
             Console.WriteLine("Current Checking Balance: $" + checkingBalance);
         }
@@ -51,7 +51,7 @@ namespace BankAccountProject
             public void CheckingWithdrawUpdate()
         {
             Console.WriteLine("Enter your withdraw: ");
-            checkDecrease = int.Parse(Console.ReadLine());
+            checkDecrease = double.Parse(Console.ReadLine());
 
             if (checkingBalance > checkDecrease)
             {
